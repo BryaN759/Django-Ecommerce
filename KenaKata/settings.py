@@ -183,9 +183,9 @@ MESSAGE_TAGS = {
 
 
 # SSLcommerz
-STORE_ID = 'testc6677d741f0e64'
-STORE_PASSWORD = 'testc6677d741f0e64@ssl'
-IS_SANDBOX = True  # Set to False for production
+STORE_ID = config('STORE_ID')
+STORE_PASSWORD = config('STORE_PASSWORD')
+IS_SANDBOX = config('IS_SANDBOX')  # Set to False for production
 
 print("EMAIL_HOST:", os.getenv('EMAIL_HOST'))
 print("EMAIL_PORT:", os.getenv('EMAIL_PORT'))
