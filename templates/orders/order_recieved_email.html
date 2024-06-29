@@ -1,0 +1,24 @@
+{% autoescape off %}
+
+Hi {{ user.first_name }},
+
+YOUR ORDER HAS BEEN RECEIVED
+
+Order Number: {{ order_number }}
+
+Payment Method: {{ payment }}
+Transaction ID: {{ transID }}
+Order Status: {{ status }}
+
+Ordered Products:
+{% for product in ordered_products %}
+- {{ product.product.product_name }} (Quantity: {{ product.quantity }}) - {{ product.product_price }} each
+{% endfor %}
+
+Subtotal: {{ subtotal }}
+Tax: {{ order.tax }}
+Grand Total: {{ order.order_total }}
+
+Thank you for shopping with us!
+
+{% endautoescape %}

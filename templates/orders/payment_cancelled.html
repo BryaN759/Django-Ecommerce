@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="margin-top: 50px;">
+    <center><i class="fas fa-ban" style="font-size: 72px;margin-bottom: 20px;color: #FFC107;"></i></center>
+    <h2 class="text-center">Payment Cancelled</h2>
+    <br>
+    <div class="text-center">
+        <a href="{% url 'store' %}" class="btn btn-warning">Try Again</a>
+    </div>
+</div>
+{% include 'payment_invoice.html' %}
+{% endblock %}
