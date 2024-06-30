@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['https://web-production-3be7.up.railway.app/',]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -156,12 +156,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = [
-    'KenaKata/static',
-]
+# STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [
+#     'KenaKata/static',
+# ]
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # media files configuration
 
 MEDIA_URL = '/media/'
@@ -186,13 +187,6 @@ MESSAGE_TAGS = {
 STORE_ID = config('STORE_ID')
 STORE_PASSWORD = config('STORE_PASSWORD')
 IS_SANDBOX = config('IS_SANDBOX')  # Set to False for production
-
-print("EMAIL_HOST:", os.getenv('EMAIL_HOST'))
-print("EMAIL_PORT:", os.getenv('EMAIL_PORT'))
-print("EMAIL_HOST_USER:", os.getenv('EMAIL_HOST_USER'))
-print("EMAIL_HOST_PASSWORD:", os.getenv('EMAIL_HOST_PASSWORD'))
-print("EMAIL_USE_TLS:", os.getenv('EMAIL_USE_TLS'))
-
 
 # SMTP configuration
 
