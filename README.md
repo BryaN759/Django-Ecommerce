@@ -15,6 +15,7 @@ I've just completed  an e-commerce website using Django! This project has been a
 * Frontend: HTML, CSS, JavaScript, Bootstrap
 * Email Integration: Google SMTP for sending order confirmations and notifications
 * Payment Integration: Bkash and SSLCommerz
+  
 💡 Challenges Overcome:
 
 Configuring and Managing static and media files efficiently
