@@ -8,6 +8,7 @@ I've just completed  an e-commerce website using Django! This project has been a
 * Order Tracking: Users can track their orders and receive email notifications.
 * Responsive Design: Optimized for all devices to ensure a seamless shopping experience.
 * Payment Gateways: Integrated Bkash and SSLCommerz payment gateways for secure and convenient transactions.
+  
 🔧 Technologies Used:
 
 * Backend: Django, PostgreSQL
