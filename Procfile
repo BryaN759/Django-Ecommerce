@@ -1,1 +1,0 @@
-web: gunicorn KenaKata.wsgi --log-file -
